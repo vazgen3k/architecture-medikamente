@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="ChatGPT" pages="6">
+  <diagram id="c02a831b-bc6e-49f5-9c93-8de17157ed7a" name="01. DFD Регистрация пациента">
+    <mxGraphModel dx="1869" dy="927" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" value="&lt;b&gt;DFD As-Is: регистрация пациента и создание папки с данными&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="900" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" value="Пациент" vertex="1">
+          <mxGeometry height="70" width="170" x="60" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="Администратор&lt;br&gt;ресепшена" vertex="1">
+          <mxGeometry height="80" width="180" x="340" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="1. Сбор данных&lt;br&gt;ФИО, дата рождения,&lt;br&gt;телефон, email,&lt;br&gt;анкета, договор" vertex="1">
+          <mxGeometry height="110" width="210" x="610" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Patients.xlsx&lt;br&gt;список пациентов" vertex="1">
+          <mxGeometry height="80" width="210" x="1020" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Папка пациента&lt;br&gt;Patient-FIO-BD" vertex="1">
+          <mxGeometry height="80" width="210" x="1100" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Data files&lt;br&gt;PDF/JPG/сканы/анкеты/договоры" vertex="1">
+          <mxGeometry height="90" width="230" x="940" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" edge="1" parent="1" source="n4" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n5" value="сообщает данные">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" edge="1" parent="1" source="n5" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n6" value="вводит вручную">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" edge="1" parent="1" source="n6" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n7" value="создание/изменение записи">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" edge="1" parent="1" source="n6" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n8" value="создание папки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" edge="1" parent="1" source="n5" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n9" value="загрузка сканов и файлов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" edge="1" parent="1" source="n8" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n9" value="хранение документов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fEyrBdI6C79de-xhtFek-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Легенда:&lt;br&gt;&lt;b&gt;Жёлтый&lt;/b&gt; — источник/роль&lt;br&gt;&lt;b&gt;Зелёный&lt;/b&gt; — ручная операция&lt;br&gt;&lt;b&gt;Фиолетовый&lt;/b&gt; — хранилище&lt;br&gt;&lt;b&gt;Красный&lt;/b&gt; — риск" vertex="1">
+          <mxGeometry height="120" width="330" x="50" y="570" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="07f6130f-56c7-4f6f-91e3-f733b975aa8a" name="02. DFD Запись к врачу">
+    <mxGraphModel dx="1558" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" value="&lt;b&gt;DFD As-Is: запись пациента к медицинскому специалисту&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="900" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" value="Пациент" vertex="1">
+          <mxGeometry height="70" width="170" x="60" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="Администратор&lt;br&gt;ресепшена" vertex="1">
+          <mxGeometry height="80" width="180" x="340" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="1. Подбор специалиста&lt;br&gt;и времени приёма" vertex="1">
+          <mxGeometry height="90" width="220" x="520" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Journal-Doctor-FIO.xlsx&lt;br&gt;журнал записи врача" vertex="1">
+          <mxGeometry height="90" width="230" x="1020" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="Врач" vertex="1">
+          <mxGeometry height="70" width="170" x="1050" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Папка пациента&lt;br&gt;на файловом сервере" vertex="1">
+          <mxGeometry height="90" width="220" x="610" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" edge="1" parent="1" source="n4" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n5" value="запрос на запись">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" edge="1" parent="1" source="n5" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n6" value="ищет слот">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" edge="1" parent="1" source="n6" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n7" value="создание/изменение записи">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" edge="1" parent="1" source="n8" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n7" value="просмотр расписания">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" edge="1" parent="1" source="n8" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n9" value="просмотр данных пациента перед приёмом">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" edge="1" parent="1" source="n5" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n9" value="может открыть папку пациента">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VRg6k7PPvPHn3wZsY0sU-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Легенда:&lt;br&gt;&lt;b&gt;Жёлтый&lt;/b&gt; — источник/роль&lt;br&gt;&lt;b&gt;Зелёный&lt;/b&gt; — ручная операция&lt;br&gt;&lt;b&gt;Фиолетовый&lt;/b&gt; — хранилище&lt;br&gt;&lt;b&gt;Красный&lt;/b&gt; — риск" vertex="1">
+          <mxGeometry height="120" width="330" x="80" y="520" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="8804967f-9482-4671-84c6-7c21f3cf303b" name="03. DFD Приём и медицинская карта">
+    <mxGraphModel dx="1078" dy="535" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" value="&lt;b&gt;DFD As-Is: приём пациента и ведение медицинской карты&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="900" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" value="Пациент" vertex="1">
+          <mxGeometry height="70" width="170" x="60" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="Врач" vertex="1">
+          <mxGeometry height="70" width="170" x="330" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="1. Просмотр истории&lt;br&gt;и документов пациента" vertex="1">
+          <mxGeometry height="90" width="230" x="585" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="2. Создание заключения&lt;br&gt;назначений / рекомендаций" vertex="1">
+          <mxGeometry height="100" width="230" x="590" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Папка пациента&lt;br&gt;медицинские документы&lt;br&gt;PDF/JPG/Excel" vertex="1">
+          <mxGeometry height="110" width="240" x="930" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Сканы и вложения&lt;br&gt;результаты, справки,&lt;br&gt;заключения" vertex="1">
+          <mxGeometry height="100" width="240" x="930" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" edge="1" parent="1" source="n4" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n5" value="жалобы / анамнез / сведения о здоровье">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" edge="1" parent="1" source="n5" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n6" value="открывает данные">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" edge="1" parent="1" source="n6" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n8" value="чтение медицинской истории">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" edge="1" parent="1" source="n5" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n7" value="формирует заключение">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" edge="1" parent="1" source="n7" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n8" value="запись/изменение файла">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" edge="1" parent="1" source="n7" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n9" value="сохранение вложений">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Nwlfuc9eKITwhBLZbafL-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Легенда:&lt;br&gt;&lt;b&gt;Жёлтый&lt;/b&gt; — источник/роль&lt;br&gt;&lt;b&gt;Зелёный&lt;/b&gt; — ручная операция&lt;br&gt;&lt;b&gt;Фиолетовый&lt;/b&gt; — хранилище&lt;br&gt;&lt;b&gt;Красный&lt;/b&gt; — риск" vertex="1">
+          <mxGeometry height="120" width="330" x="270" y="490" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="b47c5370-5680-493f-8bfd-8bd89a3c732c" name="04. DFD Анализы и лаборатория">
+    <mxGraphModel dx="1558" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" value="&lt;b&gt;DFD As-Is: учёт анализов и обмен с лабораторией&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="900" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;fontSize=12;fontStyle=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Внешняя сторона: медицинская лаборатория" vertex="1">
+          <mxGeometry height="700" width="380" x="1040" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" value="Пациент" vertex="1">
+          <mxGeometry height="70" width="170" x="60" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="Врач" vertex="1">
+          <mxGeometry height="70" width="170" x="320" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="Администратор" vertex="1">
+          <mxGeometry height="70" width="170" x="140" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="1. Назначение анализа&lt;br&gt;и регистрация заявки" vertex="1">
+          <mxGeometry height="95" width="230" x="610" y="167.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Реестр анализов за день Excel" vertex="1">
+          <mxGeometry height="90" width="240" x="700" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" value="Лаборатория&lt;br&gt;внешняя система" vertex="1">
+          <mxGeometry height="90" width="210" x="1240" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Результат анализа&lt;br&gt;файл/запись" vertex="1">
+          <mxGeometry height="90" width="210" x="1080" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" edge="1" parent="1" source="n5" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n6" value="обращение / жалобы">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" edge="1" parent="1" source="n6" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n8" value="назначает анализ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" edge="1" parent="1" source="n7" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n8" value="оформляет заявку">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n16" edge="1" parent="1" source="n8" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n9" value="запись в Excel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" edge="1" parent="1" source="n9" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n10" value="передача данных пациента и анализа">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n18" edge="1" parent="1" source="n10" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n11" value="формирует результат">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n19" edge="1" parent="1" source="n11" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n9" value="возврат результата">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n20" edge="1" parent="1" source="n9" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n6" value="просмотр результата">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pTznRzN3USkWSo3X0wSK-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Легенда:&lt;br&gt;&lt;b&gt;Жёлтый&lt;/b&gt; — источник/роль&lt;br&gt;&lt;b&gt;Зелёный&lt;/b&gt; — ручная операция&lt;br&gt;&lt;b&gt;Фиолетовый&lt;/b&gt; — хранилище&lt;br&gt;&lt;b&gt;Красный&lt;/b&gt; — риск" vertex="1">
+          <mxGeometry height="120" width="330" x="190" y="680" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="3e7e5327-a2dc-4ae8-a2a9-8fe4fc1ad11b" name="05. DFD Оплата услуг">
+    <mxGraphModel dx="1168" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" value="&lt;b&gt;DFD As-Is: оплата медицинских услуг и финансовый учёт&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="900" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" value="Пациент" vertex="1">
+          <mxGeometry height="70" width="170" x="60" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="Кассир" vertex="1">
+          <mxGeometry height="70" width="170" x="330" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="1. Приём оплаты&lt;br&gt;наличные/карта" vertex="1">
+          <mxGeometry height="90" width="220" x="500" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="ККМ&lt;br&gt;контрольно-кассовая машина" vertex="1">
+          <mxGeometry height="90" width="230" x="940" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="1С:Бухгалтерия&lt;br&gt;платежи, зарплата, налоги" vertex="1">
+          <mxGeometry height="100" width="240" x="940" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Excel-учёт платежей&lt;br&gt;двойной ручной учёт" vertex="1">
+          <mxGeometry height="90" width="240" x="630" y="502" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="Бухгалтерия" vertex="1">
+          <mxGeometry height="70" width="170" x="280" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" edge="1" parent="1" source="n4" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n5" value="оплата услуги">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" edge="1" parent="1" source="n5" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n6" value="вводит сумму и услугу">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" edge="1" parent="1" source="n6" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n7" value="фискализация">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" edge="1" parent="1" source="n7" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n8" value="TCP/IP + OLE: данные об оплате">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" edge="1" parent="1" source="n5" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n9" value="ручное дублирование">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" edge="1" parent="1" source="n9" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n10" value="сверка / отчётность">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n18" edge="1" parent="1" source="n8" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n10" value="бухгалтерский учёт">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LQOVp8zThg0y9vZotBrS-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Легенда:&lt;br&gt;&lt;b&gt;Жёлтый&lt;/b&gt; — источник/роль&lt;br&gt;&lt;b&gt;Зелёный&lt;/b&gt; — ручная операция&lt;br&gt;&lt;b&gt;Фиолетовый&lt;/b&gt; — хранилище&lt;br&gt;&lt;b&gt;Красный&lt;/b&gt; — риск" vertex="1">
+          <mxGeometry height="120" width="330" x="310" y="710" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="c3bb442b-fe06-4a77-8e3b-64708cd90f32" name="06. DFD Аналитика BI ML AI">
+    <mxGraphModel dx="1753" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" value="&lt;b&gt;DFD As-Is: аналитика, BI, ML и AI на базе файлов&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="900" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Файловый сервер&lt;br&gt;Excel/PDF/JPG/сканы" vertex="1">
+          <mxGeometry height="100" width="240" x="120" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="1С&lt;br&gt;платежи, ТМЦ, кадры" vertex="1">
+          <mxGeometry height="90" width="240" x="120" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="Бизнес-аналитик&lt;br&gt;Jupyter + Python" vertex="1">
+          <mxGeometry height="90" width="220" x="680" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="1. Выгрузка и обработка&lt;br&gt;копирование, очистка,&lt;br&gt;объединение файлов" vertex="1">
+          <mxGeometry height="120" width="250" x="900" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Отчёты&lt;br&gt;P&amp;L, ABC-анализ,&lt;br&gt;управленческие отчёты" vertex="1">
+          <mxGeometry height="100" width="250" x="950" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" value="Будущее озеро данных&lt;br&gt;BI / ML / AI / LLM" vertex="1">
+          <mxGeometry height="100" width="240" x="440" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" edge="1" parent="1" source="n4" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n6" value="ручная выгрузка файлов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" edge="1" parent="1" source="n5" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n6" value="ручная выгрузка данных">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" edge="1" parent="1" source="n6" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n7" value="обработка в Python/Jupyter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" edge="1" parent="1" source="n7" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n8" value="создание отчётов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" edge="1" parent="1" source="n7" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;fontSize=10;edgeStyle=orthogonalEdgeStyle;" target="n9" value="потенциальная загрузка в озеро данных">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v9S7khaGC9Wxe7_ljoJ1-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Легенда:&lt;br&gt;&lt;b&gt;Жёлтый&lt;/b&gt; — источник/роль&lt;br&gt;&lt;b&gt;Зелёный&lt;/b&gt; — ручная операция&lt;br&gt;&lt;b&gt;Фиолетовый&lt;/b&gt; — хранилище&lt;br&gt;&lt;b&gt;Красный&lt;/b&gt; — риск" vertex="1">
+          <mxGeometry height="120" width="330" x="130" y="730" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
