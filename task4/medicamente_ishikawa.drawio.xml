@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net" modified="2026-06-23T00:00:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="task4-ishikawa" name="Task4 Ishikawa Bottlenecks">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1000" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="title" value="Диаграмма Исикавы: узкие места при миграции «Медикаменте» на целевую архитектуру" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;" parent="1" vertex="1"><mxGeometry x="330" y="30" width="900" height="60" as="geometry" /></mxCell>
+    <mxCell id="subtitle" value="Эффект: снижение производительности, сбои и риски недоступности при переходе от Excel/файловой 1С/общего диска к сервисной архитектуре" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="390" y="105" width="780" height="55" as="geometry" /></mxCell>
+    <mxCell id="spine" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#444444;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="210" y="500" as="sourcePoint" /><mxPoint x="1350" y="500" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="effect" value="Потенциальные узкие места миграции
+[эффект]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontStyle=1;fontSize=15;align=center;verticalAlign=middle;" parent="1" vertex="1"><mxGeometry x="1370" y="420" width="260" height="160" as="geometry" /></mxCell>
+    <mxCell id="cat_infra" value="Инфраструктура" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0B4A7F;strokeColor=#083D68;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;verticalAlign=middle;" parent="1" vertex="1"><mxGeometry x="270" y="170" width="220" height="70" as="geometry" /></mxCell>
+    <mxCell id="rib_infra" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#666666;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="490" y="240" as="sourcePoint" /><mxPoint x="590" y="500" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_infra_0" value="Один физический сервер
+в офисе компании" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="80" y="260" width="230" height="60" as="geometry" /></mxCell>
+    <mxCell id="con_infra_0" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="310" y="290.0" as="sourcePoint" /><mxPoint x="370" y="290.0" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_infra_1" value="Недостаточная отказоустойчивость
+и резервирование" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="120" y="335" width="250" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_infra_1" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="370" y="367.5" as="sourcePoint" /><mxPoint x="430" y="367.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_infra_2" value="Рост нагрузки при открытии
+филиалов и росте клиентов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="210" y="420" width="270" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_infra_2" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="480" y="452.5" as="sourcePoint" /><mxPoint x="540" y="452.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cat_sw" value="ПО и архитектура" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0B4A7F;strokeColor=#083D68;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;verticalAlign=middle;" parent="1" vertex="1"><mxGeometry x="635" y="170" width="220" height="70" as="geometry" /></mxCell>
+    <mxCell id="rib_sw" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#666666;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="855" y="240" as="sourcePoint" /><mxPoint x="810" y="500" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_sw_0" value="Переход от файлового хранения
+к сервисам и БД" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="530" y="260" width="255" height="60" as="geometry" /></mxCell>
+    <mxCell id="con_sw_0" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="785" y="290.0" as="sourcePoint" /><mxPoint x="810" y="290.0" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_sw_1" value="Риск ошибок декомпозиции
+монолита на сервисы" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="560" y="335" width="275" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_sw_1" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="835" y="367.5" as="sourcePoint" /><mxPoint x="810" y="367.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_sw_2" value="Недостаточная готовность API
+и контрактов между сервисами" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="610" y="415" width="290" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_sw_2" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="900" y="447.5" as="sourcePoint" /><mxPoint x="810" y="447.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cat_int" value="Интеграции" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0B4A7F;strokeColor=#083D68;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;verticalAlign=middle;" parent="1" vertex="1"><mxGeometry x="1000" y="170" width="220" height="70" as="geometry" /></mxCell>
+    <mxCell id="rib_int" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#666666;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1000" y="240" as="sourcePoint" /><mxPoint x="1050" y="500" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_int_0" value="1С и ККМ используют
+унаследованные интеграции" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="930" y="260" width="270" height="60" as="geometry" /></mxCell>
+    <mxCell id="con_int_0" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1200" y="290.0" as="sourcePoint" /><mxPoint x="1050" y="290.0" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_int_1" value="Лаборатория требует защищённый
+API/VPN/mTLS-контур" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="975" y="335" width="280" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_int_1" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1255" y="367.5" as="sourcePoint" /><mxPoint x="1050" y="367.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_int_2" value="Риск рассинхронизации данных
+между CRM, 1С, лабораторией" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="1035" y="415" width="300" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_int_2" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1335" y="447.5" as="sourcePoint" /><mxPoint x="1050" y="447.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cat_data" value="Данные и миграция" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0B4A7F;strokeColor=#083D68;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;verticalAlign=middle;" parent="1" vertex="1"><mxGeometry x="270" y="760" width="220" height="70" as="geometry" /></mxCell>
+    <mxCell id="rib_data" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#666666;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="490" y="760" as="sourcePoint" /><mxPoint x="610" y="500" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_data_0" value="Excel, PDF, JPG и сканы
+без единой модели данных" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="70" y="660" width="280" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_data_0" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="350" y="692.5" as="sourcePoint" /><mxPoint x="410" y="692.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_data_1" value="Дубли и ошибки в карточках
+пациентов и записях" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="150" y="585" width="270" height="60" as="geometry" /></mxCell>
+    <mxCell id="con_data_1" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="420" y="615.0" as="sourcePoint" /><mxPoint x="480" y="615.0" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_data_2" value="Миграция медкарт требует
+валидации, очистки, сопоставления" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="225" y="510" width="310" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_data_2" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="535" y="542.5" as="sourcePoint" /><mxPoint x="595" y="542.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cat_sec" value="Безопасность и privacy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0B4A7F;strokeColor=#083D68;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;verticalAlign=middle;" parent="1" vertex="1"><mxGeometry x="650" y="760" width="240" height="70" as="geometry" /></mxCell>
+    <mxCell id="rib_sec" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#666666;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="770" y="760" as="sourcePoint" /><mxPoint x="850" y="500" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_sec_0" value="Шифрование at-rest/in-transit
+может увеличить задержки" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="555" y="660" width="300" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_sec_0" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="855" y="692.5" as="sourcePoint" /><mxPoint x="850" y="692.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_sec_1" value="RBAC/ABAC, согласия и аудит
+усложняют потоки доступа" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="610" y="585" width="300" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_sec_1" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="910" y="617.5" as="sourcePoint" /><mxPoint x="850" y="617.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_sec_2" value="Риск попадания ПДн/медтайны
+в логи, BI и тестовые контуры" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="675" y="510" width="310" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_sec_2" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="985" y="542.5" as="sourcePoint" /><mxPoint x="850" y="542.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cat_people" value="Персонал и процессы" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0B4A7F;strokeColor=#083D68;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;verticalAlign=middle;" parent="1" vertex="1"><mxGeometry x="1030" y="760" width="240" height="70" as="geometry" /></mxCell>
+    <mxCell id="rib_people" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#666666;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1030" y="760" as="sourcePoint" /><mxPoint x="1120" y="500" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_people_0" value="Сотрудники привыкли работать
+через Excel и общий диск" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="950" y="660" width="300" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_people_0" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1250" y="692.5" as="sourcePoint" /><mxPoint x="1120" y="692.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_people_1" value="Нужны обучение, регламенты
+и поддержка пользователей" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="1005" y="585" width="305" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_people_1" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1310" y="617.5" as="sourcePoint" /><mxPoint x="1120" y="617.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="cause_people_2" value="Ошибки ручной миграции
+и сопротивление изменениям" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="1065" y="510" width="300" height="65" as="geometry" /></mxCell>
+    <mxCell id="con_people_2" style="endArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#888888;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1365" y="542.5" as="sourcePoint" /><mxPoint x="1120" y="542.5" as="targetPoint" /></mxGeometry></mxCell>
+    <mxCell id="legend" value="Цветовая логика:
+• Синий — категории причин
+• Светло-синий — конкретные причины узких мест
+• Зелёный — итоговый риск/эффект
+
+Фокус диаграммы: производительность, доступность и управляемость миграции." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=12;align=left;verticalAlign=top;spacing=8;" parent="1" vertex="1"><mxGeometry x="70" y="40" width="230" height="145" as="geometry" /></mxCell>
+  </root>
+</mxGraphModel>
+  </diagram>
+</mxfile>
