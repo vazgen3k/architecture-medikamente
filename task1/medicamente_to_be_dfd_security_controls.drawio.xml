@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="ChatGPT" pages="6">
+  <diagram id="f68cf505601a" name="01 Регистрация пациента To-Be">
+    <mxGraphModel dx="1219" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" value="DFD To-Be: Регистрация пациента" vertex="1">
+          <mxGeometry height="40" width="500" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="p" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Пациент" vertex="1">
+          <mxGeometry height="70" width="160" x="30" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="lk" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Портал / ресепшен форма регистрации" vertex="1">
+          <mxGeometry height="90" width="210" x="320" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="cons" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Consent Management цель обработки + согласие" vertex="1">
+          <mxGeometry height="80" width="240" x="600" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="min" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Data Minimization только нужные поля" vertex="1">
+          <mxGeometry height="70" width="240" x="600" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="crm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="CRM / Patient Service карточка пациента" vertex="1">
+          <mxGeometry height="90" width="240" x="900" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="cat" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Data Catalog теги: PII, CONTACT, DELETE_ON_REQUEST" vertex="1">
+          <mxGeometry height="90" width="260" x="900" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="iam" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="IAM/RBAC ресепшен: админ.данные" vertex="1">
+          <mxGeometry height="80" width="230" x="310" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Audit Log / SIEM создание/изменение карточки" vertex="1">
+          <mxGeometry height="80" width="240" x="1220" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="p" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="lk" value="ФИО, телефон, email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="lk" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="cons" value="фиксация согласия">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="lk" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="min" value="проверка минимизации">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="lk" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="crm" value="создание пациента через API">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="iam" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="lk" value="доступ сотрудника">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="crm" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="lgUH2e0yAqn2k3uRbezA-1" value="запись ПДн">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1290" y="136.53846153846155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="crm" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="cat" value="регистрация метаданных/тегов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="crm" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="audit" value="событие доступа">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lgUH2e0yAqn2k3uRbezA-1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#99CCFF;" value="PostgreSQL CRM PII encrypted at-rest" vertex="1">
+          <mxGeometry height="130" width="190" x="1280" y="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ea30edf70e2c" name="02 Запись к врачу To-Be">
+    <mxGraphModel dx="1402" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" value="DFD To-Be: Запись пациента к врачу" vertex="1">
+          <mxGeometry height="40" width="550" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="p" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Пациент" vertex="1">
+          <mxGeometry height="70" width="150" x="10" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="app" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Портал / мобильное приложение или ресепшен" vertex="1">
+          <mxGeometry height="100" width="230" x="270" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="gw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="API Gateway TLS, auth, rate limit" vertex="1">
+          <mxGeometry height="90" width="220" x="570" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="svc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Appointment Service расписание и запись" vertex="1">
+          <mxGeometry height="90" width="230" x="940" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="iam" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="IAM + ABAC patient_owner, филиал, роль" vertex="1">
+          <mxGeometry height="80" width="240" x="570" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="notif" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Notification Service минимальный текст без мед.данных" vertex="1">
+          <mxGeometry height="80" width="260" x="885" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Audit Log / SIEM создание/перенос/отмена записи" vertex="1">
+          <mxGeometry height="80" width="260" x="1280" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="cat" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Data Catalog теги: PII, APPOINTMENT" vertex="1">
+          <mxGeometry height="80" width="230" x="210" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="p" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="app" value="запрос записи">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="app" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="gw" value="API-запрос">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="gw" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="iam" value="проверка прав">
+          <mxGeometry relative="1" x="-0.8032" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="gw" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="svc" value="создать/изменить запись">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="svc" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;entryX=0;entryY=0.554;entryDx=0;entryDy=0;entryPerimeter=0;" target="vQOetq3zsuzIliP68oa4-1" value="запись слота">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1250" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="svc" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="notif" value="напоминание">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="svc" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="audit" value="аудит операции">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="svc" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="cat" value="теги данных записи">
+          <mxGeometry relative="1" x="0.4962" y="-3" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="660" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vQOetq3zsuzIliP68oa4-1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#99CCFF;" value="БД расписания история изменений" vertex="1">
+          <mxGeometry height="130" width="190" x="1330" y="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="5a55e3b3b9b1" name="03 Приём и медицинская карта To-Be">
+    <mxGraphModel dx="1219" dy="1604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" value="DFD To-Be: Приём и медицинская карта" vertex="1">
+          <mxGeometry height="40" width="550" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="doc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Врач" vertex="1">
+          <mxGeometry height="70" width="150" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="emr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="EMR / МИС электронная медицинская карта" vertex="1">
+          <mxGeometry height="110" width="250" x="300" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="iam" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="IAM + ABAC лечащий врач, филиал, назначенный приём" vertex="1">
+          <mxGeometry height="90" width="280" x="720" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kms" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="KMS / Vault ключи шифрования" vertex="1">
+          <mxGeometry height="80" width="220" x="670" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Audit Log / SIEM просмотр, изменение, экспорт" vertex="1">
+          <mxGeometry height="90" width="250" x="740" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="cat" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Data Catalog теги: MEDICAL_SECRET, AUDIT_REQUIRED" vertex="1">
+          <mxGeometry height="80" width="300" x="280" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="doc" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="emr" value="просмотр/создание&amp;nbsp;&lt;div&gt;заключения&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.0029" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="emr" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="iam" value="проверка ABAC">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="emr" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="kms" value="шифрование/расшифрование">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="emr" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;entryX=0.345;entryY=0.955;entryDx=0;entryDy=0;entryPerimeter=0;" target="xYpWWhJSwCBpL4EiJaHR-1" value="чтение/запись мед.данных">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="651.9841269841272" y="-70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="emr" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="audit" value="аудит доступа">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="emr" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="cat" value="классификация полей">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xYpWWhJSwCBpL4EiJaHR-1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#99CCFF;" value="БД медицинских карт MEDICAL_SECRET encrypted" vertex="1">
+          <mxGeometry height="130" width="190" x="600" y="-180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="96f01246a737" name="04 Анализы и лаборатория To-Be">
+    <mxGraphModel dx="1402" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" value="DFD To-Be: Анализы и лаборатория" vertex="1">
+          <mxGeometry height="40" width="520" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="doc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Врач / EMR" vertex="1">
+          <mxGeometry height="80" width="180" x="60" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="order" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Lab Order Service назначение анализа" vertex="1">
+          <mxGeometry height="90" width="230" x="320" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="pseudo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Псевдонимизация order_id вместо ПДн" vertex="1">
+          <mxGeometry height="80" width="240" x="720" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="gw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="API Gateway TLS/mTLS, allowlist, auth" vertex="1">
+          <mxGeometry height="80" width="240" x="720" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="lab" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Внешняя лаборатория API" vertex="1">
+          <mxGeometry height="80" width="230" x="1140" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="res" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Lab Result Service проверка результата и привязки" vertex="1">
+          <mxGeometry height="90" width="260" x="710" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="cat" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Data Catalog теги: LAB_RESULT, MEDICAL_SECRET" vertex="1">
+          <mxGeometry height="80" width="270" x="310" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Audit Log / SIEM все запросы/ответы" vertex="1">
+          <mxGeometry height="80" width="250" x="1170" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="doc" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="order" value="назначение">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="order" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="pseudo" value="минимизация и&amp;nbsp;&lt;div&gt;псевдонимизация&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.0001" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="pseudo" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="gw" value="заказ анализа">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="gw" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="lab" value="API-запрос">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="lab" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="gw" value="API-ответ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="gw" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="res" value="результат">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="res" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="9o0pgciLxLa7TAYjVLi9-1" value="сохранение результата">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="res" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="cat" value="теги и lineage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="gw" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="audit" value="аудит обмена">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="res" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="audit" value="аудит записи">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9o0pgciLxLa7TAYjVLi9-1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#99CCFF;" value="БД результатов анализов&amp;nbsp;" vertex="1">
+          <mxGeometry height="130" width="190" x="750" y="750" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="35c6f2ce5320" name="05 Оплата To-Be">
+    <mxGraphModel dx="1476" dy="732" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" value="DFD To-Be: Оплата медицинских услуг" vertex="1">
+          <mxGeometry height="40" width="540" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="p" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Пациент" vertex="1">
+          <mxGeometry height="70" width="150" x="30" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="pay" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Payment Gateway единый платёжный контур" vertex="1">
+          <mxGeometry height="90" width="240" x="280" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kkm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="ККМ / чек" vertex="1">
+          <mxGeometry height="70" width="180" x="510" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="1С:Бухгалтерия через интеграционный сервис" vertex="1">
+          <mxGeometry height="80" width="240" x="600" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="iam" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="RBAC кассир: операции, бухгалтер: отчёты" vertex="1">
+          <mxGeometry height="80" width="280" x="270" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Audit Log / SIEM оплата, возврат, корректировка" vertex="1">
+          <mxGeometry height="90" width="260" x="690" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="p" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="pay" value="оплата услуги">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="pay" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="kkm" value="фискализация">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="pay" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="1c" value="проводка/учёт">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="pay" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="WRlQtLsAMQxV7KkViQSv-1" value="запись платежа">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="67.11382113821128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="iam" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="pay" value="права кассира">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="pay" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="audit" value="аудит операции">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WRlQtLsAMQxV7KkViQSv-1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#99CCFF;" value="БД платежей PAYMENT" vertex="1">
+          <mxGeometry height="130" width="190" x="760" y="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="9366269b690e" name="06 Аналитика BI ML AI To-Be">
+    <mxGraphModel dx="2337" dy="1158" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" value="DFD To-Be: Аналитика, BI, ML и AI" vertex="1">
+          <mxGeometry height="40" width="550" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="src" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Операционные системы CRM, EMR, Lab, Billing, 1C" vertex="1">
+          <mxGeometry height="100" width="250" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="etl" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="ETL/ELT Pipeline Airflow" vertex="1">
+          <mxGeometry height="80" width="220" x="360" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="anon" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Обезличивание / псевдонимизация удаление прямых идентификаторов" vertex="1">
+          <mxGeometry height="90" width="270" x="1090" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="BI / отчёты / ML datasets" vertex="1">
+          <mxGeometry height="80" width="210" x="1850" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="cat" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Apache Atlas / OpenMetadata Data Lineage + теги + владельцы" vertex="1">
+          <mxGeometry height="90" width="300" x="320" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="iam" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="RBAC для аналитиков доступ только к витринам" vertex="1">
+          <mxGeometry height="80" width="260" x="1465" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Audit Log / SIEM выгрузки, запросы, массовый доступ" vertex="1">
+          <mxGeometry height="80" width="250" x="1840" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="src" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="etl" value="инкрементальные выгрузки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="etl" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="Qof426zaxWaxtbeV_I2h-1" value="загрузка raw">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="Qof426zaxWaxtbeV_I2h-1" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="anon" value="обработка чувствительных данных">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="763.681818181818" y="80" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="anon" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;entryX=-0.007;entryY=0.557;entryDx=0;entryDy=0;entryPerimeter=0;" target="Qof426zaxWaxtbeV_I2h-2" value="публикация витрин">
+          <mxGeometry relative="1" x="-0.0006" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="1075.4761904761908" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="Qof426zaxWaxtbeV_I2h-2" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="bi" value="отчёты/датасеты">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1230" y="100" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="etl" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="cat" value="lineage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="iam" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="Qof426zaxWaxtbeV_I2h-2" value="доступ аналитиков">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1112.0512820512822" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="bi" style="endArrow=block;html=1;rounded=0;fontSize=10;strokeWidth=1.5;" target="audit" value="аудит выгрузок">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Qof426zaxWaxtbeV_I2h-1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#99CCFF;" value="Data Lake Raw доступ ограничен" vertex="1">
+          <mxGeometry height="130" width="190" x="690" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="Qof426zaxWaxtbeV_I2h-2" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#99CCFF;" value="DWH / Data Marts ANONYMIZED, ANALYTICS_ALLOWED" vertex="1">
+          <mxGeometry height="130" width="190" x="1500" y="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
